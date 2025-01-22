@@ -8,7 +8,6 @@ public class _19532 {
 
         //1. 연립 방정식이기에 and 연산 활용
         //2. x,y는 -999부터 999까지의 정수이기에 순회하면서 만족하는 x,y찾기
-
         // O(N^2)인데 2000*2000 이라 ㄱㅊ
 
         Scanner sc = new Scanner(System.in);
