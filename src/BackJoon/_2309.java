@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class _2309 {
 
     public static void main(String[] args) {
-
         /*
         1. 가능한 경우 중 '아무거나' 출력 -> 처음으로 성립하면 바로 리턴
         2. 9명 중 7명(9C7)의 합이 100
@@ -22,15 +21,19 @@ public class _2309 {
         }
         Arrays.sort(arr); // 오름차 순 정렬
 
+        long beforeTime = System.currentTimeMillis();
         for(int i = 0; i < 8; i++){
             for(int j = i+1; j < 9; j++){
                 if(sum - arr[i] - arr[j] == 100){ // 전체 합 - 2명 == 100일 때
                     for(int k=0; k<9; k++){
                         if(k != i && k !=j) System.out.println(arr[k]); // 그 2명 빼고 출력
                     }
+                    long endTime = System.currentTimeMillis();
+                    System.out.println((endTime - beforeTime) +" ms" );
                     return; // 한 번 성립하면 바로 리턴
                 }
             }
         }
+
     }
 }
